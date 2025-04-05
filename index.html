@@ -1,11 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPIngenieros</title>
+    <title>ESCON - Protección y Seguridad</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS personalizado (reducido) -->
+    <link rel="stylesheet" href="files/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
+    <!-- Navbar Bootstrap Mejorado -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top py-2">
+        <!-- Logo - visible en todas las pantallas -->
+        <a class="navbar-brand" href="#">
+            <img src="files/images/logooo.png" alt="Logo" class="logo-nav" width="80">
+        </a>
+        
+        <!-- Botón hamburguesa - solo en móviles -->
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Menú - colapsable en móviles -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-lg-auto">
+                <li class="nav-item"><a class="nav-link px-lg-3" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3" href="#nosotros">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3" href="#mision-vision">Misión/Visión</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3" href="#pilares">Pilares</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3" href="#servicios">Nuestros Servicios</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3" href="#clientes">Principales Clientes</a></li>
+                <li class="nav-item">
+                    <a class="px-lg-3 btn-contacto" href="#contacto">
+                        <i class="fas fa-phone"></i> Contáctanos
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carrusel Bootstrap -->
+    <section id="inicio" class="fullscreen-carousel">
+        <div id="mainCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <img src="files/images/portada-1.png" class="d-block w-100 h-100" alt="Proyectos de ingeniería" style="object-fit: cover;">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="files/images/portada-2.png" class="d-block w-100 h-100" alt="Equipo trabajando" style="object-fit: cover;">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="files/images/portada-3.png" class="d-block w-100 h-100" alt="Infraestructura" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-text container">
+            <h1><span>INGENIERÍA,</span><br><span>EXPERIENCIA</span><br><span>Y CALIDAD</span></h1>
+            <p>INGENIERÍA & PROYECTOS CUENTA CON UNA LÍNEA SÓLIDA DE ESPECIALISTAS Y PROFESIONALES EN LAS DIVERSAS ÁREAS DE INGENIERÍA Y MANTENIMIENTO.</p>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class=" nosotros-bg nosotros-section py-5 ">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="files/images/imagen-de-nosotros.png" alt="Nosotros" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4">NOSOTROS</h2>
+                    <div class="mv-text">
+                        <p>Somos un <span class="highlight">equipo multidisciplinario</span> profecionales y especialistas tecnicos certificados en ingeniería, mantenimiento industrial, metal mecanico, diseño y fabricación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Misión y Visión -->
+    <section id="mision-vision" class="py-5 bg-light">
+        <div class="container">
+            <!-- Misión -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="card bg-primary text-white p-4 h-100">
+                        <h3 class="mv-title mb-3">MISIÓN</h3>
+                        <p class="mv-text">
+                            Brindar servicios de ingeniería en proyectos e instrumentos con seguridad y sostenibilidad, generando soluciones innovadoras que agreguen valor a nuestros clientes y contribuyan al desarrollo tecnológico del sector.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="files/images/Mision.png" alt="Misión" class="img-fluid rounded">
+                </div>
+            </div>
+
+            <!-- Visión -->
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <div class="card bg-primary text-white p-4 h-100">
+                        <h3 class="mv-title mb-3">VISIÓN</h3>
+                        <p class="mv-text">
+                            Ser la empresa líder en servicios de ingeniería, destacando en proyectos y mantenimientos, con especial atención a las condiciones locales y estándares internacionales de calidad.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="files/images/vision.jpg" alt="Visión" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Pilares -->
+    <section id="pilares" class="py-5 text-white position-relative">
+        <div class="pilares-bg position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative">
+            <h2 class="section-title text-center mb-5">NUESTROS PILARES</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pilar-card p-4 h-100">
+                        <img src="files/images/pilar11.png" alt="Personal calificado" class="img-fluid mb-3 w-25">
+                        <h3 class="pilar-title mb-3">PERSONAL CALIFICADO</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pilar-card p-4 h-100">
+                        <img src="files/images/pilar2.png" alt="Tecnología" class="img-fluid mb-3 w-25">
+                        <h3 class="pilar-title mb-3">TECNOLOGÍA</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pilar-card p-4 h-100">
+                        <img src="files/images/pilar3.png" alt="Sistemas de gestión" class="img-fluid mb-3 w-25">
+                        <h3 class="pilar-title mb-3">SISTEMAS DE GESTIÓN</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">NUESTROS SERVICIOS</h2>
+            <div class="row g-4">
+                <!-- Servicio 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="servicio-card h-100">
+                        <div class="servicio-header p-4 text-center">
+                            <h1 class="servicio-num mb-0">01</h1>
+                            <h3 class="servicio-title mb-0">MANTENIMIENTO</h3>
+                        </div>
+                        <div class="servicio-body p-4">
+                            <ul class="servicio-list list-unstyled mv-text">
+                                <li class="mb-2">- Mantenimiento de equipos industriales</li>
+                                <li class="mb-2">- Revisión y ajuste de sistemas</li>
+                                <li class="mb-2">- Reparación de componentes</li>
+                                <li class="mb-2">- Mantenimiento preventivo y correctivo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Servicio 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="servicio-card h-100">
+                        <div class="servicio-header p-4 text-center">
+                            <h1 class="servicio-num mb-0">02</h1>
+                            <h3 class="servicio-title mb-0">INGENIERÍA Y MEJORAS</h3>
+                        </div>
+                        <div class="servicio-body p-4">
+                            <ul class="servicio-list list-unstyled mv-text">
+                                <li class="mb-2">- Diseño de planos y estructuras</li>
+                                <li class="mb-2">- Desarrollo de proyectos</li>
+                                <li class="mb-2">- Optimización de procesos</li>
+                                <li class="mb-2">- Análisis y mejora continua</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Servicio 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="servicio-card h-100">
+                        <div class="servicio-header p-4 text-center">
+                            <h1 class="servicio-num mb-0">03</h1>
+                            <h3 class="servicio-title mb-0">MAESTRANZA</h3>
+                        </div>
+                        <div class="servicio-body p-4">
+                            <ul class="servicio-list list-unstyled  mv-text">
+                                <li class="mb-2">- Fabricación de piezas metálicas</li>
+                                <li class="mb-2">- Construcción de estructuras</li>
+                                <li class="mb-2">- Trabajos de metalmecánica</li>
+                                <li class="mb-2">- Mecanizado de precisión</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Servicio 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="servicio-card h-100">
+                        <div class="servicio-header p-4 text-center">
+                            <h1 class="servicio-num mb-0">04</h1>
+                            <h3 class="servicio-title mb-0">SERVICIOS ELÉCTRICOS</h3>
+                        </div>
+                        <div class="servicio-body p-4">
+                            <ul class="servicio-list list-unstyled mv-text">
+                                <li class="mb-2">- Instalaciones eléctricas</li>
+                                <li class="mb-2">- Mantenimiento de sistemas</li>
+                                <li class="mb-2">- Tableros de distribución</li>
+                                <li class="mb-2">- Mediciones y pruebas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Servicio 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div >
+                        <div class="servicio-header p-4 text-center">
+                            <h1 class="servicio-num mb-0">05</h1>
+                            <h3 class="servicio-title mb-0">SERVICIOS DE MONTAJE</h3>
+                        </div>
+                        <div class="servicio-body p-4">
+                            <ul class="servicio-list list-unstyled  mv-text">
+                                <li class="mb-2">- Montaje industrial</li>
+                                <li class="mb-2">- Instalación de equipos</li>
+                                <li class="mb-2">- Ensamblaje de componentes</li>
+                                <li class="mb-2">- Puesta en marcha</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Clientes -->
+    <section id="clientes" class="py-5 bg-light">
+        <div class="container">
+        <h2 class="clientes-title text-center mb-5">NUESTROS PRINCIPALES CLIENTES</h2>
+        <div class="clientes-carousel bg-white p-4 rounded shadow">
+            <div class="clientes-track d-flex align-items-center">
+            <!-- Grupo original de logos (duplicado para efecto infinito) -->
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-1.png" alt="Cliente 1" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-2.png" alt="Cliente 2" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-3.png" alt="Cliente 3" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-4.png" alt="Cliente 4" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-5.png" alt="Cliente 5" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-6.png" alt="Cliente 6" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-7.png" alt="Cliente 7" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-8.png" alt="Cliente 8" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-9.png" alt="Cliente 9" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-10.png" alt="Cliente 10" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-11.png" alt="Cliente 11" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-12.png" alt="Cliente 12" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-13.png" alt="Cliente 13" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-14.png" alt="Cliente 14" class="cliente-img"></div>
+            
+            <!-- Duplicado del grupo de logos -->
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-1.png" alt="Cliente 1" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-2.png" alt="Cliente 2" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-3.png" alt="Cliente 3" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-4.png" alt="Cliente 4" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-5.png" alt="Cliente 5" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-6.png" alt="Cliente 6" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-7.png" alt="Cliente 7" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-8.png" alt="Cliente 8" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-9.png" alt="Cliente 9" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-10.png" alt="Cliente 10" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-11.png" alt="Cliente 11" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-12.png" alt="Cliente 12" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-13.png" alt="Cliente 13" class="cliente-img"></div>
+            <div class="cliente-slide px-3"><img src="files/images/logo-de-clientes-14.png" alt="Cliente 14" class="cliente-img"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto-section py-5">
+        <div class="container">
+            <div class="formulario-section bg-white bg-opacity-10 p-4 rounded">
+                <div class="row g-4">
+                    <!-- Formulario -->
+                    <div class="col-lg-7">
+                        <div class="formulario-cita p-4">
+                            <h3 class="form-title mb-4">CONTÁCTANOS</h3>
+                            <form id="citaForm">
+                                <div class="row g-3">
+                                    <div class="col-md-11">
+                                        <label for="dni_ruc" class="form-label">DNI/RUC*</label>
+                                        <input type="text" id="dni_ruc" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <label for="persona_empresa" class="form-label">Persona/Empresa*</label>
+                                        <input type="text" id="persona_empresa" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <label for="telefono" class="form-label">Teléfono*</label>
+                                        <input type="tel" id="telefono" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-11">
+                                        <label for="email" class="form-label">Correo electrónico*</label>
+                                        <input type="email" id="email" class="form-control" required>
+                                    </div>
+                                    <div class="col-11">
+                                        <label for="ciudad" class="form-label">Ciudad*</label>
+                                        <input type="text" id="ciudad" class="form-control" required>
+                                    </div>
+                                    <div class="col-11">
+                                        <label for="asunto" class="form-label">Asunto*</label>
+                                        <input type="text" id="asunto" class="form-control" required>
+                                    </div>
+                                    <div class="col-11">
+                                        <label for="descripcion" class="form-label">Descripción</label>
+                                        <textarea id="descripcion" class="form-control" rows="3"></textarea>
+                                    </div>
+                                    <div class="col-11">
+                                        <button type="submit" class="btn btn-primary">ENVIAR</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen -->
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <div class="formulario-imagen h-100">
+                            <img src="https://static.vecteezy.com/system/resources/previews/017/678/791/non_2x/architect-technician-and-builders-and-engineers-and-mechanics-and-construction-worker-illustration-cartoon-character-engineer-with-white-safety-helmet-and-vest-in-construction-site-vector.jpg" alt="Imagen Contacto" class="img-fluid rounded h-100 w-100" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Información de contacto -->
+                <div class="col-lg-6">
+                    <!-- Logo - visible en todas las pantallas -->
+                    <a class="navbar-brand mx-auto mx-lg-0" href="#">
+                      <img src="files/images/logooo.png" alt="Logo" class="logo-nav" width="150">
+                    </a>
+                    
+                    <h3 class="fw-bold">IP INGENIERÍA Y PROYECTOS S.A.C</h3>
+                    <p>RUC: 2061090838</p>
+                    
+                    <div class="contact-info">
+                      <p><i class="fas fa-phone"></i> 948 027 180</p>
+                      <p><i class="fas fa-phone"></i> 956 707 002</p>
+                      <p><i class="fas fa-envelope"></i> Ingproyectos232@gmail.com</p>
+                      <p><i class="fas fa-map-marker-alt"></i> Asoc. de Vivienda Virgen de la Candelaria, Characato</p>
+                    </div>
+                  
+                    <div class="libro-reclamaciones-box mt-4 p-3 border-top">
+                      <a href="#" class="d-block text-center">
+                        <img src="files/images/reclamaciones.png" alt="Libro de Reclamaciones" class="img-fluid" style="max-width: 80px;">
+                      </a>
+                    </div>
+                  </div>
+
+                <!-- Mapa y redes sociales -->
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <h4>Redes Sociales</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mapa-container">
+                        <iframe class="w-100" height="250" src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="https://wa.me/51948027180" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+          </a>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-center text-md-end">
+                        <p class="mb-0">© 2025 - Desarrollado por INNOVA SISTEMAS INTEGRALES S.A.C.</p>
+                    </div>
+                </div>
+        </footer>
+    </section>
+
+
     
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS personalizado -->
+    <script src="files/js/index.js"></script>
 </body>
 </html>
+

@@ -1,0 +1,623 @@
+
+/* 
+ * ====================
+ * VARIABLES Y ESTILOS BASE
+ * ====================
+ */
+ :root {
+  --color-primario: #0b4680;
+  --color-secundario: #FFB300;
+  --color-texto: #333;
+  --color-fondo: #f8f9fa;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  padding-top: 70px;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  overflow-x: hidden;
+}
+
+html, body {
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 100vw; 
+  overflow: hidden;
+}
+
+/*
+ * ====================
+ * COMPONENTES REUTILIZABLES
+ * ====================
+ */
+
+/* Títulos de sección */
+.section-title {
+  font-size: 3rem;
+  color: rgb(1, 1, 1);
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #df8d10;
+  border-radius: 2px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #b06b04;
+  text-shadow: 0 0 5px rgba(255, 153, 0, 0.3);
+}
+
+.mv-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+/* Tarjetas */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(83, 35, 35, 0.1);
+}
+
+/* Botones */
+.btn-primary {
+  background: var(--color-secundario);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #e68a00;
+  transform: scale(1.05);
+}
+
+.btn-contacto {
+  background-color: var(--color-secundario);
+  color: #C8102E;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.btn-contacto i {
+  font-size: 1.2em;
+}
+
+.btn-contacto:hover {
+  background-color: #E69A00;
+  color: white;
+}
+
+/*
+ * ====================
+ * NAVBAR
+ * ====================
+ */
+.navbar {
+  background-color: var(--color-primario) !important;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(255, 213, 1) !important;
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  
+}
+
+.nav-link:hover {
+  color: rgb(175, 117, 29) !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: #dbb407;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 2rem);
+}
+
+/*
+ * ====================
+ * HERO / CARRUSEL
+ * ====================
+ */
+.fullscreen-carousel {
+  height: calc(100vh - 70px);
+  position: relative;
+  margin-top: 93px;
+  background: linear-gradient(to right, rgba(11, 70, 128, 0.9), rgba(11, 70, 128, 0.7)), 
+              url('img/hero-bg.jpg') center/cover no-repeat;
+}
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, -50%);
+  color: white;
+  max-width: 30%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.carousel-text p {
+  font-size: 1.2rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/*
+ * ====================
+ * SECCIÓN NOSOTROS
+ * ====================
+ */
+.nosotros-section {
+  background-color: #2a0037;
+  color: rgb(255, 255, 255);
+  position: relative;
+  padding: 5rem 0;
+}
+
+.nosotros-bg {
+  background-image: url('https://cersa.org.pe/capacitaciones/sites/default/files/MinaBuenaVista.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.nosotros-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*
+ * ====================
+ * MISIÓN Y VISIÓN
+ * ====================
+ */
+#mision-vision {
+  position: relative;
+  background: url('https://img.freepik.com/vector-premium/repita-plantilla-linea-horizontal-fondo-patron-diseno-vectores-creativos_116849-244.jpg') no-repeat center center/cover;
+  padding: 5rem 0;
+  color: rgb(0, 0, 0);
+}
+
+.mv-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-bottom: 3px solid #ff9900;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #000000;
+}
+
+.card.bg-primary {
+  background-color: var(--color-primario) !important;
+}
+
+/*
+ * ====================
+ * PILARES
+ * ====================
+ */
+.pilares-bg {
+  background: url('https://www.solerpalau.com/es-es/blog/wp-content/uploads/2020/07/economia-circular-en-la-construccio%CC%81n.jpg') no-repeat center center/cover;
+  opacity: 0.5;
+}
+
+.pilar-card {
+  background: rgba(26, 18, 115, 0);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  border-radius: 10px;
+  text-align: center;
+  height: 100%;
+}
+
+.pilar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(135, 6, 6, 0);
+}
+
+.pilar-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+  filter: drop-shadow(0 5px 5px rgba(82, 33, 33, 0));
+}
+
+.pilar-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.pilar-text {
+  color: black;
+  font-size: 1rem;
+}
+
+.pilar-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: #FF9900;
+}
+
+/*
+ * ====================
+ * SERVICIOS
+ * ====================
+ */
+#servicios {
+  position: relative;
+  background: url('https://img.freepik.com/vector-premium/repita-plantilla-linea-horizontal-fondo-patron-diseno-vectores-creativos_116849-244.jpg') no-repeat center center/cover;
+  color: rgb(0, 0, 0);
+  padding: 5rem 0;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-header {
+  background: #ffffff00;
+  color: rgb(0, 0, 0);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.servicio-num {
+  font-size: 4.5rem;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.servicio-title {
+  font-size: 2.3rem;
+  margin: 0.5rem 0 0;
+  font-weight: 800;
+}
+
+.servicio-list {
+  list-style: none;
+}
+
+.servicio-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.servicio-list li::before {
+  content: '•';
+  color: var(--color-primario);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/*
+ * ====================
+ * CLIENTES
+ * ====================
+ */
+ #clientes {
+  position: relative;
+  background: url('https://img.freepik.com/vector-premium/repita-plantilla-linea-horizontal-fondo-patron-diseno-vectores-creativos_116849-244.jpg') no-repeat center center/cover;
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+.clientes-title {
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  position: relative;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.clientes-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--color-primario);
+  margin: 0.5rem auto 0;
+}
+
+.clientes-carousel {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.clientes-track {
+  display: flex;
+  align-items: center;
+  animation: scroll 25s linear infinite;
+  width: calc(150px * 20);
+  will-change: transform;
+}
+
+.cliente-slide {
+  flex: 0 0 150px;
+  padding: 0 1rem;
+  transition: transform 0.3s ease;
+}
+
+.cliente-img {
+  max-width: 120px;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+.cliente-img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-150px * 10)); }
+}
+  
+/*
+ * ====================
+ * CONTACTO
+ * ====================
+ */
+.contacto-section {
+  position: relative;
+  background: url('https://i0.wp.com/grupocasalima.com/wp-content/uploads/2022/04/obras-de-construccion-corporacion-.webp?fit=1000%2C706&ssl=1') no-repeat center center/cover;
+  padding: 5rem 0;
+}
+
+.contacto-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.contacto-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.formulario-section {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.formulario-cita {
+  background: rgba(0, 0, 0, 0);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
+}
+
+/*
+ * ====================
+ * REDES SOCIALES
+ * ====================
+ */
+.contact-section {
+  background-color: #0A2940;
+  color: white;
+  padding: 10px 0;
+}
+
+.contact-info i {
+  color: #FFAA00;
+  margin-right: 10px;
+}
+
+.social-icons a {
+  color: #FFAA00;
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  animation: pulse-whatsapp 2s infinite;
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  text-decoration: none; /* Elimina subrayado en el enlace */
+}
+
+.whatsapp-icon {
+  font-size: 34px;
+  line-height: 1; /* Elimina el espacio adicional */
+  margin-top: -3px; /* Ajuste fino para centrar perfectamente */
+}
+
+/* Estilos para el cuadro del libro de reclamaciones */
+.libro-reclamaciones-box {
+  background-color: #f8f9fa00;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+.libro-reclamaciones-box:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.libro-reclamaciones-box h5 {
+  color: #0A2940;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.border-top {
+  border-top: 3px solid #d1bf1a !important;
+}
+
+/*
+ * ====================
+ * MEDIA QUERIES
+ * ====================
+ */
+@media (max-width: 1200px) {
+  .carousel-text {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50%;
+  }
+  
+  .carousel-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel-text {
+    max-width: 70%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-text {
+    max-width: 80%;
+  }
+  
+  .carousel-text h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  
+  .carousel-text p {
+    font-size: 1rem;
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-text h1 {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
